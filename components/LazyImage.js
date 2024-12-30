@@ -109,6 +109,7 @@ export default function LazyImage({
     style,
     width: width || 'auto',
     height: height || 'auto',
+    referrerpolicy: "no-referrer",
     onClick
   }
 
