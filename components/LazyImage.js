@@ -74,6 +74,7 @@ export default function LazyImage({
           if (entry.isIntersecting) {
             // 拉取图片
             const img = new Image()
+            img.referrerPolicy = 'no-referrer'
             img.src = adjustedImageSrc
             img.onload = () => {
               setCurrentSrc(adjustedImageSrc)
@@ -109,7 +110,6 @@ export default function LazyImage({
     style,
     width: width || 'auto',
     height: height || 'auto',
-    referrerpolicy: "no-referrer",
     onClick
   }
 
